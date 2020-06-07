@@ -5,9 +5,10 @@ def db():
     db = DB()
     db.setup()
     db.add_item(hire,new_technology,good_conversations,upcoming_events,doubts)
-with open("simple.txt", "r") as f:       
+
+with open("simple.txt", "r") as f:
     words = list(map(str.strip, f.readlines()))
-    try: 
+    try:
         text=words[words.index("#hire")+1]
         hire=text
         print(text)
